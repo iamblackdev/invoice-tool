@@ -1,5 +1,5 @@
-import React, { useContext } from "react";
-import { useState } from "react/cjs/react.development";
+import React, { useContext, useState } from "react";
+
 import { InvoiceContext } from "../../../context/invoiceContext";
 import { convertToDecimal } from "../../../utils/convertTodecimal";
 import RegularInput from "../../fomsInput/regularInput";
