@@ -1,0 +1,14 @@
+.invoice-details-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 24px;
+  height: calc(100vh - 80px);
+  overflow-y: auto;
+
+  .heading {
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+}

@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// font-family: 'Montserrat', sans-serif;
+// font-family: 'Roboto', sans-serif;
+body {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #777b7f;
+  letter-spacing: 1px;
+  font-size: 14px;
+  line-height: 27px;
+  background-color: #f2f3f5;
+  font-feature-settings: normal !important;
+  font-variant: normal;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+  color: inherit;
+  font-weight: 600;
+}
+
+ul {
+  list-style-type: none;
+}
+button {
+  outline: 0;
+  border: none;
+  cursor: pointer;
+}
+
+p,
+span {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.content {
+  position: relative;
+  display: flex;
+}
+.add-button {
+  cursor: pointer;
+  position: absolute;
+  right: 50px;
+  top: -20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff64a4;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.invoice-details {
+  padding: 20px 32px;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(224, 208, 224, 1);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(224, 208, 224, 1);
+  box-shadow: 0px 0px 8px 0px rgba(224, 208, 224, 1);
+
+  .hearder {
+    width: 100%;
+    display: flex;
+    margin-bottom: 32px;
+    justify-content: space-between;
+
+    .invoice {
+      > span {
+        display: block;
+
+        &:nth-child(1) {
+          color: #000;
+          font-size: 18px;
+          font-weight: 500;
+          text-transform: uppercase;
+          margin-bottom: 16px;
+        }
+        &:nth-child(2) {
+          text-transform: uppercase;
+          line-height: 0;
+          margin-bottom: 8px;
+        }
+      }
+    }
+    .customer-details {
+      display: flex;
+      align-items: center;
+      .details {
+        text-align: right;
+        margin-right: 24px;
+
+        > span {
+          display: block;
+
+          &:nth-child(1) {
+            text-transform: uppercase;
+            margin-bottom: 16px;
+          }
+          &:nth-child(2) {
+            color: #000;
+            font-weight: 500;
+            text-transform: uppercase;
+            line-height: 0;
+            margin-bottom: 8px;
+          }
+        }
+      }
+      .print-btn {
+        cursor: pointer;
+        padding: 12px;
+        display: flex;
+        align-items: center;
+        column-gap: 16px;
+        border: 1px solid #66a7ff;
+        border-radius: 5px;
+        @media print {
+          display: none;
+        }
+      }
+    }
+  }
+  .invoice-table {
+    width: 100%;
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    thead {
+      th {
+        padding: 20px 0px 20px 30px;
+        border: 1px solid #e7e8ed;
+        border-right: 0;
+        border-left: 0;
+        text-transform: uppercase;
+        &:nth-child(1) {
+          text-align: left;
+        }
+      }
+    }
+    tbody {
+      td {
+        padding: 20px 0px 20px 30px;
+        border: 1px solid #e7e8ed;
+        border-right: 0;
+        border-left: 0;
+        text-align: center;
+
+        &:nth-child(1) {
+          text-align: left;
+        }
+      }
+      tr:last-child {
+        td {
+          padding-top: 40px;
+          border: 0;
+          span {
+            display: block;
+          }
+        }
+      }
+      // .total-wrapper {
+      //   // width: 70%;
+      //   display: flex;
+      //   margin: 0 auto;
+      //   justify-content: space-between;
+      //   // padding: 0 60px 0px 98px;
+      //   padding: 0 16% 0px 20%;
+      //   font-size: 13px;
+
+      .value {
+        font-weight: bold;
+        font-size: 14px;
+      }
+
+      .grand-total {
+        margin-top: 20px;
+        font-weight: bold;
+        font-size: 16px;
+      }
+      // }
+    }
+  }
+}

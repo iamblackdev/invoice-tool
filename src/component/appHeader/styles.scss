@@ -1,0 +1,19 @@
+.app-header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  background-color: #336399;
+
+  @media print {
+    display: none;
+  }
+
+  span {
+    color: #f7fafb;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 5;
+  }
+}

@@ -1,0 +1,48 @@
+.invoice-card {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 25px;
+  cursor: pointer;
+
+  &:hover,
+  &.active {
+    background-color: #404b57;
+    color: white;
+  }
+
+  .details {
+    .inv-no {
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+
+      span {
+        letter-spacing: 0px;
+      }
+    }
+    .purchaser {
+      color: #4b74aa;
+    }
+    & > span {
+      display: block;
+    }
+  }
+
+  .aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .date {
+      font-size: 12px;
+      color: #777b7f;
+    }
+    .total-price {
+      font-size: 16px;
+      text-align: right;
+      color: inherit;
+    }
+    & > span {
+      display: block;
+    }
+  }
+}

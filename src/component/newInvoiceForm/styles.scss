@@ -1,0 +1,260 @@
+.new-invoice-modal {
+  position: fixed;
+  z-index: 4;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .modal-content {
+    width: 100%;
+    max-width: 700px;
+    min-height: 400px;
+    background-color: white;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    transform: scale(0);
+    opacity: 0;
+    animation-name: modalOpen;
+    animation-duration: 0.5s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  .modal-header {
+    padding: 20px 15px 0px 30px;
+    display: flex;
+    align-items: center;
+    // justify-content: space-between;
+    .heading {
+      font-size: 16px;
+      color: black;
+      font-weight: 600;
+    }
+    .order-no {
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-left: 32px;
+      margin-right: auto;
+    }
+    .close-btn {
+      cursor: pointer;
+    }
+  }
+  .modal-body {
+    min-height: 500px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .customer-details-form {
+      padding: 0px 15px 40px 30px;
+
+      .top {
+        margin-top: 16px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #e7e8ed;
+        padding-bottom: 8px;
+        .skip-btn {
+          font-weight: 500;
+          cursor: pointer;
+          margin-left: auto;
+          display: flex;
+          align-items: center;
+          background-color: #f3f4f6;
+          outline: 0;
+          border: none;
+          padding: 12px;
+          span {
+            font-size: 13px;
+            color: #85b8fc;
+            text-transform: uppercase;
+            margin-right: 12px;
+          }
+        }
+      }
+      .form {
+        .form-row {
+          margin-top: 20px;
+          display: flex;
+          align-items: stretch;
+          justify-content: space-between;
+        }
+        .form-col {
+          justify-content: space-between;
+          display: flex;
+          flex-direction: column;
+        }
+        .address {
+          width: 100%;
+          height: calc(100% - 24px);
+          textarea {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .pincode {
+          margin-top: auto;
+        }
+      }
+    }
+    .invoice-details {
+      font-size: 13px;
+      padding: 0 32px 0 32px;
+      margin-bottom: auto;
+      box-shadow: none;
+
+      .hearder {
+        margin-bottom: 10px;
+        align-items: center;
+
+        .invoice {
+          & > span:nth-child(1) {
+            font-size: 13px;
+            margin-bottom: 0;
+          }
+        }
+        .customer-details {
+          .details {
+            margin-right: 4px;
+            span:nth-child(1) {
+              margin-bottom: 8px;
+            }
+          }
+        }
+        .print-btn {
+          margin-left: 0;
+          border: 0;
+        }
+      }
+      .invoice-table {
+        margin-top: 0px;
+
+        thead {
+          th {
+            padding: 10px 0px 10px 20px;
+          }
+        }
+        tbody {
+          td {
+            padding: 10px 0px 10px 20px;
+          }
+          .append-btn-wrapper {
+            display: flex;
+            align-items: stretch;
+            justify-content: center;
+
+            .price-input {
+              input {
+                text-align: right;
+              }
+            }
+
+            .send-btn {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin-left: 14px;
+              border: 1px solid #66a7ff;
+              border-radius: 5px;
+              background-color: transparent;
+              min-width: 50px;
+            }
+            span {
+              margin-left: auto;
+            }
+            .close-btn {
+              margin-left: auto;
+              display: block;
+              background-color: transparent;
+            }
+          }
+          .new-product-form {
+            td {
+              padding: 10px 0px 11px 10px;
+              border-bottom: 1px solid #e7e8ed;
+            }
+          }
+        }
+      }
+    }
+    .footer-wrapper {
+      margin-top: auto;
+
+      .discount-input {
+        display: flex;
+        padding: 15px;
+        align-items: center;
+        .inputs {
+          display: flex;
+          column-gap: 20px;
+          max-width: 40%;
+        }
+        .aside {
+          display: flex;
+          column-gap: 30px;
+          margin-left: auto;
+        }
+      }
+
+      .footer {
+        padding: 0px 15px 0px 30px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        background-color: #eef0f2;
+
+        .group {
+          span {
+            display: block;
+            line-height: 24px;
+            margin-bottom: 0;
+          }
+        }
+
+        .discount {
+          display: flex;
+          align-items: center;
+          .group:nth-child(1) {
+            margin-right: 50px;
+          }
+        }
+
+        .aside {
+          margin-left: auto;
+          display: flex;
+          align-items: center;
+
+          .group {
+            span:nth-child(2) {
+              font-weight: 600;
+              color: #000;
+            }
+          }
+
+          .btn {
+            margin-left: 32px;
+            font-size: 11px;
+            border-radius: 5px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: white;
+            background-color: #66a7ff;
+            padding: 10px 40px;
+          }
+        }
+      }
+    }
+  }
+
+  @keyframes modalOpen {
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
