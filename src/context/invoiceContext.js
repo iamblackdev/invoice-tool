@@ -20,8 +20,9 @@ export const defaultInvoiceObject = {
 };
 
 const InvoiceContextProvider = (props) => {
-  let storedInvoice = JSON.parse(localStorage.getItem("storedInvoice")) || [];
-  let storedIDs = JSON.parse(localStorage.getItem("IDs")) || [];
+  let storedInvoice =
+    JSON.parse(window.localStorage.getItem("storedInvoice")) || [];
+  let storedIDs = JSON.parse(window.localStorage.getItem("IDs")) || [];
   const [invoiceArray, setInvoiceArray] = useState(storedInvoice);
   const [searchArray, setSearchArray] = useState(invoiceArray);
   const [invoiceObject, setInvoiceObject] = useState(defaultInvoiceObject);
@@ -77,8 +78,8 @@ const InvoiceContextProvider = (props) => {
 
   // usseffect for updatign local storage
   useEffect(() => {
-    localStorage.setItem("storedInvoice", JSON.stringify(invoiceArray));
-    localStorage.setItem("IDs", JSON.stringify(generatedIds));
+    window.localStorage.setItem("storedInvoice", JSON.stringify(invoiceArray));
+    window.localStorage.setItem("IDs", JSON.stringify(generatedIds));
     // eslint-disable-next-line
   }, [invoiceArray]);
 

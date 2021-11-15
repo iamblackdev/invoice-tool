@@ -9,7 +9,6 @@ import { InvoiceContext } from "./context/invoiceContext";
 function App() {
   const { showModal, setShowModal, onCloseModal } = useContext(InvoiceContext);
   const [selectedInvoice, setSelectedInvoice] = useState(null);
-  // console.log(getHumanTime(new Date()));
 
   return (
     <>
